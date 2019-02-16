@@ -6,48 +6,34 @@ import java.io.InputStreamReader;
 
 public class NewtonRapson {
 
-	static BufferedReader reader;
+	static final double EPSILON = 0.001;
 
 	public NewtonRapson() {
-		reader = new BufferedReader(new InputStreamReader(System.in));
+		
 	}
 
-	public static double readDouble() throws IOException {
-		return (new Double(reader.readLine())).doubleValue();
+	// An example function whose solution
+	// is determined using Bisection Method.
+	// The function is x^3 - x^2 + 2
+	static double func(double x) {
+		return x * x * x - x * x + 2;
 	}
 
-	// Codificación de la función x cubica menos 4.3 por x cuadrada mas 4 por x
-	// menos 17.2
-	public static double f(double x) {
-		return x * x * x - 4.3 * x * x + 4 * x - 17.2;
+	// Derivative of the above function
+	// which is 3*x^x - 2*x
+	static double derivFunc(double x) {
+		return 3 * x * x - 2 * x;
 	}
 
-	// Derivada de la funcion anterior
-	public static double df(double x) {
-		return 3 * x * x - 4.3 * 2 * x + 4;
-	}
+	static void newtonRaphson(double x) {
+		double h = func(x) / derivFunc(x);
+		while (Math.abs(h) >= EPSILON) {
+			h = func(x) / derivFunc(x);
 
-	public static void main(String[] args) {
-		double x, y, epsilon;
-		boolean done = false;
-		NewtonRapson v = new NewtonRapson();
-
-		try {
-			System.out.print("x? ");
-			x = readDouble();
-			System.out.println();
-			System.out.print("epsilon? ");
-			epsilon = readDouble();
-			do {
-				y = f(x);
-				System.out.println(x + " " + y);
-				if (Math.abs(y) < epsilon)
-					done = true;
-				x -= y / df(x);
-			} while (!done);
-			System.out.println("Raiz de la Ecuación : " + x);
-		} catch (Exception e) {
-			e.printStackTrace();
+			// x(i+1) = x(i) - f(x) / f'(x)
+			x = x - h;
 		}
+
+		System.out.print("The value of the" + " root is : " + Math.round(x * 100.0) / 100.0);
 	}
 }
