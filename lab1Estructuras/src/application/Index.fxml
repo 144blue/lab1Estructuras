@@ -1,8 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.IndexController">
-	<!-- TODO Add Nodes -->
-</AnchorPane>
-
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="388.0" prefWidth="797.0" tabClosingPolicy="UNAVAILABLE" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.1">
+  <tabs>
+    <Tab text="Metodo 1">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="226.0" prefWidth="528.0">
+               <children>
+                  <TextField layoutX="38.0" layoutY="60.0" prefHeight="37.0" prefWidth="40.0" text="ax2+b" />
+                  <TextField layoutX="110.0" layoutY="60.0" prefHeight="37.0" prefWidth="40.0" text="ax2+b" />
+                  <TextField layoutX="180.0" layoutY="60.0" prefHeight="37.0" prefWidth="40.0" text="ax2+b" />
+                  <TextField layoutX="258.0" layoutY="60.0" prefHeight="37.0" prefWidth="40.0" text="ax2+b" />
+                  <TextField layoutX="339.0" layoutY="60.0" prefHeight="37.0" prefWidth="40.0" text="ax2+b" />
+                  <TextField layoutX="408.0" layoutY="60.0" prefHeight="37.0" prefWidth="40.0" text="ax2+b" />
+                  <TextField layoutX="484.0" layoutY="60.0" prefHeight="37.0" prefWidth="40.0" text="ax2+b" />
+                  <TextField layoutX="555.0" layoutY="60.0" prefHeight="37.0" prefWidth="40.0" text="ax2+b" />
+                  <TextField layoutX="623.0" layoutY="60.0" prefHeight="37.0" prefWidth="40.0" text="ax2+b" />
+                  <TextField layoutX="695.0" layoutY="60.0" prefHeight="37.0" prefWidth="40.0" text="ax2+b" />
+                  <Button layoutX="308.0" layoutY="152.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="161.0" text="CALCULAR" />
+                  <Label layoutX="361.0" layoutY="231.0" text="Raices">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="248.0" layoutY="269.0" prefHeight="66.0" prefWidth="298.0" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Metodo 2">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TextField layoutX="70.0" layoutY="99.0" prefHeight="35.0" prefWidth="507.0" />
+                  <Button layoutX="277.0" layoutY="161.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="110.0" text="CALCULAR" />
+                  <Label layoutX="301.0" layoutY="233.0" text="Raices">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="189.0" layoutY="257.0" prefHeight="69.0" prefWidth="299.0" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>
