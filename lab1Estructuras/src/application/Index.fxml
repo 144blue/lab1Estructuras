@@ -8,11 +8,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="388.0" prefWidth="797.0" tabClosingPolicy="UNAVAILABLE" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.1">
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="388.0" prefWidth="797.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.IndexController">
   <tabs>
     <Tab text="Metodo 1">
       <content>
-        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="226.0" prefWidth="528.0">
+        <AnchorPane fx:id="a" minHeight="0.0" minWidth="0.0" prefHeight="226.0" prefWidth="528.0">
                <children>
                   <TextField layoutX="38.0" layoutY="60.0" prefHeight="37.0" prefWidth="40.0" text="ax2+b" />
                   <TextField layoutX="110.0" layoutY="60.0" prefHeight="37.0" prefWidth="40.0" text="ax2+b" />
@@ -24,7 +24,7 @@
                   <TextField layoutX="555.0" layoutY="60.0" prefHeight="37.0" prefWidth="40.0" text="ax2+b" />
                   <TextField layoutX="623.0" layoutY="60.0" prefHeight="37.0" prefWidth="40.0" text="ax2+b" />
                   <TextField layoutX="695.0" layoutY="60.0" prefHeight="37.0" prefWidth="40.0" text="ax2+b" />
-                  <Button layoutX="308.0" layoutY="152.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="161.0" text="CALCULAR" />
+                  <Button fx:id="BTcalcular" layoutX="308.0" layoutY="152.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="161.0" text="CALCULAR" onAction="#calcular" />
                   <Label layoutX="361.0" layoutY="231.0" text="Raices">
                      <font>
                         <Font size="19.0" />

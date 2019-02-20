@@ -39,6 +39,8 @@ public class NewtonRapson {
 	
 	public static void main(String[] args) {
 		
+		Stack k=new Stack();
+		
 		int[] test= {2,-3,1,-5};
 		int a=0;
 		
