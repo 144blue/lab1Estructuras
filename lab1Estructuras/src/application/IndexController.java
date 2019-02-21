@@ -14,18 +14,22 @@ public class IndexController implements Initializable{
 	
 	@FXML private AnchorPane a;
 	@FXML private Button BTcalcular;
+	@FXML private TextField TFraices;
 	
 	private TextField[] TFentradas;
+	private Main main;
 	
 	
-	public String mostrarValoresIn() {
+	public String showElementIn() {
 		String cadena="";
 		
 		if(TFentradas!=null) {
 			for(int i=0; i<TFentradas.length;i++) {
-				if(!TFentradas[i].getText().equals("")) {
+				if(!TFentradas[i].getText().equals("")) 
 					cadena+=TFentradas[i].getText()+",";
-				}
+				else
+					cadena+="0,";
+				
 			}
 			
 		}
@@ -37,27 +41,23 @@ public class IndexController implements Initializable{
 	
 	@FXML
 	public void calcular() {
-		System.out.print(mostrarValoresIn());
-		
-		String[] valores=mostrarValoresIn().split(",");
-		int total=0;
+		String[] elementsIn=showElementIn().split(",");
+		int[] polyn=new int[elementsIn.length];
 	
-		for(int i=0;i<valores.length;i++) {
-			total+= Integer.parseInt(valores[i]);
+		for(int i=0;i<elementsIn.length;i++) {
+			polyn[i]=Integer.parseInt(elementsIn[i]);
 		}
-		
-		
-		System.out.print(total);
+		TFraices.setText(main.instance().methodNewtonRaphson(polyn, 5));
 	}
 	
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		
-		TFentradas=new TextField[10];
-		int posx=50;
+		TFentradas=new TextField[11];
+		int posx=30;
 		
-		for(int i=0;i<10;i++) {	
+		for(int i=0;i<11;i++) {	
 			TextField e=new TextField();
 			
 			e.setLayoutY(100);
@@ -71,11 +71,6 @@ public class IndexController implements Initializable{
 			System.out.println(posx);	
 			
 		}
-		
-		TFentradas[3].setLayoutY(120);
-		
-		
-		
 		
 	}
 

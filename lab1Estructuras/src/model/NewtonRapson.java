@@ -15,40 +15,61 @@ public class NewtonRapson {
 	// An example function whose solution
 	// is determined using Bisection Method.
 	// The function is x^3 - x^2 + 2
-	static double func(double x) {
-		return Math.pow(x, 3) - Math.pow(x, 2) + 2;
+	static double func(int[] a, double x) {
+		double result=0;
+		int id=a.length-1;
+		
+		for(int i=0; i<a.length;i++) {
+			result+=a[i]*Math.pow(x,i+id);
+			id-=2;
+		}
+		return result;
 	}
 
 	// Derivative of the above function
 	// which is 3*x^x - 2*x
-	static double derivFunc(double x) {
-		return 3 * Math.pow(x, 2) - 2 * Math.pow(x, 1);
+	static double derivFunc(int[] a,double x) {
+		double result=0;
+		int id=a.length-1;
+		
+		for(int i=0;i<a.length;i++) {
+		//	System.out.println("grado: "+(i+id-1)+"\tdato: "+a[i]+"\tcohef: "+(i+id));
+			result+=(i<=a.length-1)?a[i]*(i+id)*Math.pow(x,i+id-1):0;
+			
+			id-=2;
+		}
+		return result;
 	}
 
-	static void newtonRaphson(double x) {
-		double h = func(x) / derivFunc(x);
+	public static String methodNewtonRaphson(int[] a,double x) {
+		String cadena="";
+		double h = func(a,x) / derivFunc(a,x);
 		while (Math.abs(h) >= EPSILON) {
-			h = func(x) / derivFunc(x);
+			h = func(a,x) / derivFunc(a,x);
 
 			// x(i+1) = x(i) - f(x) / f'(x)
 			x = x - h;
 		}
 
-		System.out.print("The value of the" + " root is : " + Math.round(x * 100.0) / 100.0);
+		cadena+="The value of the" + " root is : " + Math.round(x * 100.0) / 100.0+"\n";
+		
+		return cadena;
 	}
 	
 	public static void main(String[] args) {
 		
-		Stack k=new Stack();
-		
-		int[] test= {2,-3,1,-5};
+	
+		int[] test= {0,0,0,0,0,0,0,1,2,0,2};
 		int a=0;
 		
 		for(int i=0;i<test.length;i++)
 			a=+test[i];
 		
-		System.out.print(a);
+		System.out.println("nnnn"+NewtonRapson.func(test, 5));
+		System.out.println(NewtonRapson.derivFunc(test, 5));
 		
-		NewtonRapson.newtonRaphson(11);
+		System.out.println(NewtonRapson.methodNewtonRaphson(test,5));
+		
+		
 	}
 }

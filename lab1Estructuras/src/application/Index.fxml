@@ -24,13 +24,13 @@
                   <TextField layoutX="555.0" layoutY="60.0" prefHeight="37.0" prefWidth="40.0" text="ax2+b" />
                   <TextField layoutX="623.0" layoutY="60.0" prefHeight="37.0" prefWidth="40.0" text="ax2+b" />
                   <TextField layoutX="695.0" layoutY="60.0" prefHeight="37.0" prefWidth="40.0" text="ax2+b" />
-                  <Button fx:id="BTcalcular" layoutX="308.0" layoutY="152.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="161.0" text="CALCULAR" onAction="#calcular" />
+                  <Button fx:id="BTcalcular" layoutX="308.0" layoutY="152.0" mnemonicParsing="false" onAction="#calcular" prefHeight="39.0" prefWidth="161.0" text="CALCULAR" />
                   <Label layoutX="361.0" layoutY="231.0" text="Raices">
                      <font>
                         <Font size="19.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="248.0" layoutY="269.0" prefHeight="66.0" prefWidth="298.0" />
+                  <TextField fx:id="TFraices" layoutX="248.0" layoutY="269.0" prefHeight="66.0" prefWidth="298.0" />
                </children></AnchorPane>
       </content>
     </Tab>
