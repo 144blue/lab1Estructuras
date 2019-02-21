@@ -14,7 +14,7 @@
       <content>
         <AnchorPane fx:id="a" minHeight="0.0" minWidth="0.0" prefHeight="226.0" prefWidth="528.0">
                <children>
-                  <Button fx:id="BTcalcular" layoutX="308.0" layoutY="152.0" mnemonicParsing="false" onAction="#calcular" prefHeight="39.0" prefWidth="161.0" text="CALCULAR" />
+                  <Button fx:id="BTcalcular" layoutX="308.0" layoutY="152.0" mnemonicParsing="false" onAction="#calculate" prefHeight="39.0" prefWidth="161.0" text="CALCULAR" />
                   <Label layoutX="361.0" layoutY="231.0" text="Raices">
                      <font>
                         <Font size="19.0" />
