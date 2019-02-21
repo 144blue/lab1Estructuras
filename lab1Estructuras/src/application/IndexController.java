@@ -40,7 +40,7 @@ public class IndexController implements Initializable{
 	}
 	
 	@FXML
-	public void calcular() {
+	public void calculate() {
 		String[] elementsIn=showElementIn().split(",");
 		int[] polyn=new int[elementsIn.length];
 	

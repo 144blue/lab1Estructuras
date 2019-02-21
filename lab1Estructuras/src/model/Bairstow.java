@@ -2,14 +2,15 @@ package model;
 
 public class Bairstow {
 
-	public void BairstowMethod(double a[], double r0, double s0, double re[], double im[]) {
+	public String  BairstowMethod(double a[], double r0, double s0, double re[], double im[]) {
 
 		int n = a.length, iter = 0;
 		double b[] = new double[n], c[] = new double[n];
 		double ea1 = 1, ea2 = 1, T = 0.00001;
 		double r = r0, s = s0, det, ds, dr;
 		int MaxIter = 100, i;
-
+		String result="";
+		
 		for (iter = 0; iter < MaxIter && n > 3; iter++) {
 
 			do {
@@ -75,8 +76,9 @@ public class Bairstow {
 		}
 
 		for (i = 1; i < re.length; i++)
-
-			System.out.println("las raices son: " + "X[" + i + "]= " + re[i] + " j " + im[i]);
+			result+="las raices son: " + "X[" + i + "]= " + re[i] + " j " + im[i]+"\n";
+		
+		return result;
 
 	}
 

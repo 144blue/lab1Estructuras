@@ -14,16 +14,6 @@
       <content>
         <AnchorPane fx:id="a" minHeight="0.0" minWidth="0.0" prefHeight="226.0" prefWidth="528.0">
                <children>
-                  <TextField layoutX="38.0" layoutY="60.0" prefHeight="37.0" prefWidth="40.0" text="ax2+b" />
-                  <TextField layoutX="110.0" layoutY="60.0" prefHeight="37.0" prefWidth="40.0" text="ax2+b" />
-                  <TextField layoutX="180.0" layoutY="60.0" prefHeight="37.0" prefWidth="40.0" text="ax2+b" />
-                  <TextField layoutX="258.0" layoutY="60.0" prefHeight="37.0" prefWidth="40.0" text="ax2+b" />
-                  <TextField layoutX="339.0" layoutY="60.0" prefHeight="37.0" prefWidth="40.0" text="ax2+b" />
-                  <TextField layoutX="408.0" layoutY="60.0" prefHeight="37.0" prefWidth="40.0" text="ax2+b" />
-                  <TextField layoutX="484.0" layoutY="60.0" prefHeight="37.0" prefWidth="40.0" text="ax2+b" />
-                  <TextField layoutX="555.0" layoutY="60.0" prefHeight="37.0" prefWidth="40.0" text="ax2+b" />
-                  <TextField layoutX="623.0" layoutY="60.0" prefHeight="37.0" prefWidth="40.0" text="ax2+b" />
-                  <TextField layoutX="695.0" layoutY="60.0" prefHeight="37.0" prefWidth="40.0" text="ax2+b" />
                   <Button fx:id="BTcalcular" layoutX="308.0" layoutY="152.0" mnemonicParsing="false" onAction="#calcular" prefHeight="39.0" prefWidth="161.0" text="CALCULAR" />
                   <Label layoutX="361.0" layoutY="231.0" text="Raices">
                      <font>

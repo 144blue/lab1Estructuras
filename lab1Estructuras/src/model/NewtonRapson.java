@@ -42,7 +42,7 @@ public class NewtonRapson {
 	}
 
 	public static String methodNewtonRaphson(int[] a,double x) {
-		String cadena="";
+		String value="";
 		double h = func(a,x) / derivFunc(a,x);
 		while (Math.abs(h) >= EPSILON) {
 			h = func(a,x) / derivFunc(a,x);
@@ -50,10 +50,8 @@ public class NewtonRapson {
 			// x(i+1) = x(i) - f(x) / f'(x)
 			x = x - h;
 		}
-
-		cadena+="The value of the" + " root is : " + Math.round(x * 100.0) / 100.0+"\n";
-		
-		return cadena;
+		value+="The value of the" + " root is : " + Math.round(x * 100.0) / 100.0+"\n";
+		return value;
 	}
 	
 	public static void main(String[] args) {
